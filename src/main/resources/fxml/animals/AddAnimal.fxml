@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="625.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.animals.AddAnimalController">
+   <children>
+      <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: orange; -fx-text-fill: white;" text="Hayvan Ekleme" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <VBox spacing="45.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Cins">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="genusChoiceBox" prefHeight="35.0" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Cinsiyet">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="600.0" spacing="25.0">
+                     <children>
+                        <RadioButton fx:id="erkekRadioButton" mnemonicParsing="false" text="Erkek" HBox.hgrow="ALWAYS">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="disiRadioButton" mnemonicParsing="false" text="Dişi" toggleGroup="$gender">
+                           <font>
+                              <Font size="18.0" />
+                           </font></RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fillWidth="false">
+               <children>
+                  <Label text="Ağırlık">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="weightTextField" prefHeight="39.0" prefWidth="134.0" promptText="ex: 800, 1240">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Sağlık Bilgisi">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="healthStatusChoiceBox" prefHeight="35.0" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Ağıl Konumu">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="barnLocationChoiceBox" prefHeight="35.0" prefWidth="150.0" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="125.0" prefWidth="625.0" spacing="50.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: red;" text="Iptal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Ekle" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

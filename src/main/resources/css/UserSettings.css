@@ -1,0 +1,8 @@
+.directory-image {
+    -fx-fill: gray;
+}
+
+.directory-image:hover {
+    -fx-fill: blue;
+
+}

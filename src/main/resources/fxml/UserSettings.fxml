@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="531.0" maxWidth="400.0" prefHeight="531.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@../css/UserSettings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.UserSettingsController">
+    <children>
+        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: orange; -fx-text-fill: white;" text="Kullanıcı Ayarları" VBox.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets left="15.0" />
+            </padding>
+        </Label>
+        <VBox maxHeight="200.0" maxWidth="1.7976931348623157E308" prefWidth="400.0" spacing="25.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox maxHeight="1.7976931348623157E308">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Fotoğraf" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="24.0" />
+                            </font></Label>
+                  <ImageView fx:id="profilePhoto" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../images/logo.png" />
+                      </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets right="15.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="directoryPathTextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="file-icon">
+                                  <image>
+                                      <Image url="@../images/file.png" />
+                                  </image>
+                              </ImageView>
+                              <Button fx:id="selectDirectoryButton" mnemonicParsing="false" onAction="#selectDirectory" opacity="0.0" prefHeight="32.0" prefWidth="32.0" styleClass="directory-image">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" maxHeight="1.7976931348623157E308">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="İsim" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="24.0" />
+                            </font></Label>
+                        <TextField fx:id="nameTextField" maxHeight="45.0" maxWidth="300.0" minHeight="45.0" promptText="ex: Serum Çakı" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="24.0" />
+                            </font></TextField>
+                    </children>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+            <padding>
+                <Insets left="15.0" />
+            </padding>
+        </VBox>
+        <HBox fx:id="saveButtonClick" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: red;" text="Iptal" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Kaydet" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

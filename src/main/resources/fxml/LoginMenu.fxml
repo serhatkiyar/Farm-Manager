@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="550" prefWidth="450" style=" -fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.LoginMenuController">
+   <Pane prefHeight="550" prefWidth="450" style=" -fx-background-color: #DADADA;">
+      <children>
+         <HBox layoutX="25.0" layoutY="200.0" prefHeight="191.0" prefWidth="409.0">
+            <children>
+               <VBox prefHeight="259.0" prefWidth="61.0" spacing="40.0">
+                  <padding>
+                     <Insets left="20.0" top="34.0" />
+                  </padding>
+                  <children>
+                     <Icon content="ACCOUNT_BOX" />
+                     <Icon content="LOCK" />
+                  </children>
+               </VBox>
+               <VBox prefHeight="259.0" prefWidth="304.0" spacing="20.0">
+                  <padding>
+                     <Insets top="30.0" />
+                  </padding>
+                  <children>
+                     <TextField fx:id="userNameInput1" prefHeight="40.0" prefWidth="296.0" promptText="Kullanıcı adı" style="-fx-background-color: #f0f0f0; -fx-border-color: #17a2b8; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-padding: 5px;">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </TextField>
+                     <PasswordField fx:id="passwordInput1" prefHeight="40.0" prefWidth="296.0" promptText="Şifre" style="-fx-background-color: #f0f0f0; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-padding: 5px; -fx-border-color: #17a2b8;">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                        <font>
+                           <Font name="System" size="14.0" />
+                        </font>
+                     </PasswordField>
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <Text layoutX="73.0" layoutY="159.0" stroke="#969696" strokeWidth="0.4" style="-fx-fill: #17a2b8; -fx-line-spacing: 10px; -fx-text-alignment: center; -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 1, 0, 1, 1);" styleClass="label-title" text="Oturum açın" wrappingWidth="304.0">
+            <font>
+               <Font name="Roboto" size="45.0" />
+            </font>
+         </Text>
+      </children>
+      <effect>
+         <ImageInput>
+            <source>
+               <Image url="@../images/login-menu-images/background.png" />
+            </source>
+         </ImageInput>
+      </effect>
+   </Pane>
+      <HBox layoutX="55.0" layoutY="200.0" prefHeight="160.0" prefWidth="340.0">
+            <VBox prefHeight="259.0" prefWidth="35.0" spacing="30.0">
+         <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/login-menu-images/username.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/login-menu-images/password.png" />
+            </image>
+         </ImageView>
+               <padding>
+                  <Insets top="34.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="259.0" prefWidth="304.0" spacing="20.0">
+                  <TextField fx:id="userNameInput" prefHeight="40.0" prefWidth="296.0" promptText="Kullanıcı adı" style="-fx-background-color: #f0f0f0; -fx-border-color: #17a2b8; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-padding: 5px;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwordInput" prefHeight="40.0" prefWidth="296.0" promptText="Şifre" style="-fx-background-color: #f0f0f0; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-padding: 5px; -fx-border-color: #17a2b8; -fx-font-size: 14px;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Roboto Light" size="14.0" />
+                     </font>
+                  </PasswordField>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+      </HBox>
+      <Button stylesheets="@../css/LoginMenu.css" styleClass="login-button" layoutX="125.0" layoutY="367.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="50.0" prefWidth="200.0" text="Giriş">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="73.0" layoutY="159.0" stroke="#969696" strokeWidth="0.4" style="-fx-fill: #000; -fx-line-spacing: 10px; -fx-text-alignment: center; -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 1, 0, 1, 1); -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);" styleClass="label-title" text="Oturum açın" wrappingWidth="304.0">
+         <font>
+            <Font name="Roboto" size="45.0" />
+         </font>
+      </Text>
+</Pane>

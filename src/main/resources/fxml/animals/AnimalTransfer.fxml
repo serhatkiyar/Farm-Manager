@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.animals.AnimalTransferController">
+    <children>
+        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: orange; -fx-text-fill: white;" text="Hayvan Transfer" VBox.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <VBox fillWidth="false" spacing="10.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" text="Küpe Numarası">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            <HBox>
+               <children>
+                      <TextField fx:id="earringNumberTextField" prefHeight="45.0" prefWidth="300.0" promptText="ex: TR-CW-1000">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </TextField>
+                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#findAnimal" prefHeight="50.0" prefWidth="50.0" styleClass="search-button" stylesheets="@../../css/AnimalSearch.css">
+                       <graphic>
+                           <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                               <image>
+                                   <Image url="@../../images/menu-bar-images/search.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+               </children>
+            </HBox>
+            <Label maxHeight="1.7976931348623157E308" text="Hedef Ağıl">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="targetBarnChoiceBox" maxHeight="45.0" maxWidth="300.0" minHeight="45.0" minWidth="300.0" prefHeight="45.0" prefWidth="300.0" />
+            <VBox fx:id="animalCard" />
+            </children>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+        </VBox>
+        <HBox alignment="CENTER" prefHeight="102.0" prefWidth="400.0" spacing="50.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: red;" text="Iptal" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="transferButton" mnemonicParsing="false" onAction="#transferButtonClick" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: green;" text="Transfer Et" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

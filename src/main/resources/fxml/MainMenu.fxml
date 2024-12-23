@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/MainMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.MainMenuController">
+   <left>
+      <VBox prefHeight="1080.0" prefWidth="320.0" style="-fx-border-color: black; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="150.0">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" maxHeight="125.0" prefWidth="318.0" spacing="7.0">
+                     <children>
+                        <ImageView fx:id="profilePhoto" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="profile-photo">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label fx:id="username" maxWidth="1.7976931348623157E308" styleClass="username" text="Serum Çakı">
+                                 <font>
+                                    <Font name="Roboto Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="userSettingsButton" maxHeight="40.0" maxWidth="166.0" mnemonicParsing="false" onAction="#userSettingsButtonClick" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #FF9F1C;" styleClass="primary-button" text="Kullanıcı Ayarları" StackPane.alignment="BOTTOM_RIGHT">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/user-settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER_LEFT" prefWidth="320.0" spacing="15.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="mainMenuButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mainMenuButtonClick" styleClass="primary-button" text="Ana Sayfa" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchAnimalButtonClick" prefWidth="326.0" styleClass="primary-button" text="Hayvan Sorgulama" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/menu-bar-images/search.png" />
+                        </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="vaccinationButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#vaccinationButtonClick" styleClass="primary-button" text="Aşı Yap" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/vaccination.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="addAnimalButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addAnimalButtonClick" styleClass="primary-button" text="Hayvan Ekleme" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/add-animal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeAnimalButtonClick" styleClass="primary-button" text="Hayvan Silme" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/remove-animal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="animaltransferButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#animaltransferButtonClick" styleClass="primary-button" text="Hayvan Transfer" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/animal-transfer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="addBarnButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addBarnButtonClick" styleClass="primary-button" text="Ağıl Ekleme" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36" fitWidth="36" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/add-barn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="primary-button" text="Karanlık Mod" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/dark-mode.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logoutButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logoutButtonClick" styleClass="cancel-button" text="Çıkış Yap" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu-bar-images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="contentPane" prefHeight="1080.0" prefWidth="1600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

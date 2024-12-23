@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.farm.AddBarnController">
+    <children>
+        <Label alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" style="-fx-background-color: orange; -fx-text-fill: white;" text="Ağıl Ekleme" VBox.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+        </Label>
+        <VBox maxHeight="200.0" maxWidth="1.7976931348623157E308" prefWidth="400.0" spacing="25.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox maxHeight="1.7976931348623157E308">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" text="İsim" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="barnName" maxHeight="45.0" maxWidth="300.0" minHeight="45.0" promptText="ex: İnönü Ağıl 1" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font></TextField>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" maxHeight="1.7976931348623157E308">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" text="Kapasite" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                        <TextField fx:id="barnCapacity" maxHeight="45.0" maxWidth="300.0" minHeight="45.0" promptText="ex: 120, 150" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font></TextField>
+                    </children>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+            <padding>
+                <Insets left="15.0" />
+            </padding>
+        </VBox>
+        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: red;" text="Iptal" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Ekle" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

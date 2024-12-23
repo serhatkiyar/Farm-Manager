@@ -1,0 +1,15 @@
+.login-button {
+    -fx-font-size: 28;
+    -fx-font-family: Roboto;
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+
+.login-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-font-size: 28;
+    -fx-font-family: Roboto;
+    -fx-background-color: orange;
+    -fx-text-fill: black;
+}

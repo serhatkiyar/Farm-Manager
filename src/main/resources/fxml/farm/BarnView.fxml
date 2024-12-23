@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.farm.BarnViewController">
+   <center>
+      <VBox prefWidth="100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="200.0" prefWidth="199.0" style="-fx-border-width: 0.3; -fx-border-color: black;">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox maxWidth="532.0" spacing="15.0" style="-fx-border-color: gray; -fx-border-width: 0.3;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" text="Ağıl İsmi" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Doluluk Oranı" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Kapasite">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox spacing="15.0" style="-fx-border-color: gray; -fx-border-width: 0.3;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" text="İnek">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Koyun">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Keçi">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox spacing="15.0" style="-fx-border-color: gray; -fx-border-width: 0.3;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" text="Sağlıklı">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Gebe">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Label maxWidth="1.7976931348623157E308" text="Enfeksiyon">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox style="-fx-background-color: gray;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #89CFF0;" text="Hayvanlar" textFill="WHITE">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="barnTable" prefHeight="726.0" prefWidth="1600.0" style="-fx-font-family: 'Verdana'; -fx-font-size: 22;" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="earringNumberColumn" editable="false" prefWidth="280.0" sortable="false" text="Küpe Numarası" />
+                            <TableColumn fx:id="genusColumn" prefWidth="280.0" text="Cins" />
+                              <TableColumn fx:id="genderColumn" prefWidth="280.0" text="Cinsiyet" />
+                              <TableColumn fx:id="weightColumn" prefWidth="280.0" text="Ağırlık" />
+                              <TableColumn fx:id="healthStatusColumn" prefWidth="280.0" text="Sağlık Durumu" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-background-color: orange;" text="AĞIL GÖRÜNTÜLEME EKRANI: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="barnName" maxWidth="1.7976931348623157E308" style="-fx-background-color: orange;" text="barnName" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cysapi.controllers.animals.AnimalViewController">
+   <center>
+      <VBox prefHeight="275.0" prefWidth="600.0" style="-fx-border-color: purple; -fx-border-width: 4;">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" opacity="0.5" style="-fx-background-color: purple;" text="Hayvan Önizleme" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="animalProfilePhoto" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/unknown-animal.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="earringNumberLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                            <graphic>
+                                <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/animal-status/animal-stats-photos/earring.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label fx:id="genusLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/animal-status/animal-stats-photos/genus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label fx:id="barnLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/animal-status/animal-stats-photos/barn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label fx:id="genderLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/animal-status/animal-stats-photos/gender.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label fx:id="healthStatusLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/animal-status/animal-stats-photos/health.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label fx:id="weightLabel" text=":">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/animal-status/animal-stats-photos/weight.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
